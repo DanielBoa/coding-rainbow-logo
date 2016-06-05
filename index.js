@@ -5,7 +5,7 @@
  * @date 4th Jun 2016
  */
 
-var colours = [ '#925aa3', '#2395c2', '#46b86a', '#f2c202', '#f05959' ];
+var colours = [ '#9659A7', '#2494C1', '#49BB6C', '#F1C500', '#F25A57' ]
 var lineThickness = 30;
 var outerRadius, innerRadius, x, y, endAngle, angleOffsets;
 
