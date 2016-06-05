@@ -9,11 +9,6 @@ var colours = [ '#925aa3', '#2395c2', '#46b86a', '#f2c202', '#f05959' ];
 var lineThickness = 30;
 var outerRadius, innerRadius, x, y, endAngle, angleOffsets;
 
-document.addEventListener('mousemove', preventDefault);
-document.addEventListener('touchmove', preventDefault);
-
-function preventDefault(e) { e.preventDefault(); }
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
   
@@ -25,13 +20,12 @@ function setup() {
   y = (height / 2) + (outerRadius / 4.5); 
 }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  setup();
-}
-
 function randomAngleOffset() {
   return random(radians(-5), radians(5));
+}
+
+function windowResized() {
+  setup();
 }
 
 function draw() {
@@ -72,8 +66,14 @@ function drawArc(x, y, start, end, index, colour) {
   start += angleOffsets[index];
   end -= angleOffsets[index];
  
-  end = end > start ? end : start + radians(0.01);
+  end = (end > start) ? end : (start + radians(0.01));
 
   stroke(colour);
   arc(x, y, r, r, start, end);
 }
+
+
+//  avoid scrolling on mobile to allow interaction with touch to work as expected
+document.addEventListener('mousemove', preventDefault);
+document.addEventListener('touchmove', preventDefault);
+function preventDefault(e) { e.preventDefault(); }
