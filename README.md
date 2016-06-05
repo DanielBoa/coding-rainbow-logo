@@ -1,5 +1,8 @@
 # coding-rainbow-logo
-Coding Rainbow logo implemented in p5js
+Interactive (Coding Rainbow)[https://github.com/rainbowcoder] logo ideas, implemented in p5js.
 
-Live:
+Rainbow:
 http://danielboa.github.io/coding-rainbow-logo/
+
+Rainbow Donuts:
+http://danielboa.github.io/coding-rainbow-logo/background/
