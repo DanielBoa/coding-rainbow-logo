@@ -9,6 +9,11 @@ var colours = [ '#925aa3', '#2395c2', '#46b86a', '#f2c202', '#f05959' ];
 var lineThickness = 30;
 var outerRadius, innerRadius, x, y, endAngle, angleOffsets;
 
+document.addEventListener('mousemove', preventDefault);
+document.addEventListener('touchmove', preventDefault);
+
+function preventDefault(e) { e.preventDefault(); }
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   
@@ -30,7 +35,7 @@ function randomAngleOffset() {
 }
 
 function draw() {
-  var i, r, colour;
+  var i;
   var startAngle = PI;
   var desiredEndAngle = startAngle + map(mouseX, 0, windowWidth, 0, PI);
 
